@@ -467,7 +467,7 @@ def generate_interactive_html(
             {"notes1": notes1_txt, "notes2": notes2_txt}, ensure_ascii=False
         ),
         "codebook_columns_json": json.dumps(cb_cols, ensure_ascii=False),
-        "codebook_rows_json": json.dumps(cb_rows, ensure_ascii=False),
+        "codebook_rows_json": json.dumps(cb_rows, ensure_ascii=False, default=str),
         "transcript_files_json": json.dumps(transcript_files),
         "transcript_contents_json": json.dumps(transcript_contents, ensure_ascii=False),
     }
